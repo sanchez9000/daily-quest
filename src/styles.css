@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --color-ink: #101218;
+  --color-canvas: #171a21;
+  --color-panel: #1e222b;
+  --color-raised: #2a3140;
+  --color-line: #343c4c;
+  --color-fg: #e7ebf3;
+  --color-muted: #93a0b5;
+  --color-faint: #6d7b90;
+  --color-accent: #4c8dff;
+  --color-accent-fg: #071018;
+  --color-cal-cobalt: #4c8dff;
+  --color-cal-sage: #3dbe7a;
+  --color-cal-tomato: #f07167;
+  --color-cal-amber: #e8b04a;
+  --color-cal-violet: #a78bfa;
+  --color-cal-teal: #2ec4b6;
+  --color-cal-rose: #f472b6;
+  --color-cal-slate: #c5d0de;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-canvas);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
